@@ -9,11 +9,11 @@
 3. Node.js v12.0.0 or newer
 
 ## Setup
-
-1. Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
-2. YouTube Data API v3 Key **[Guide](https://developers.google.com/youtube/v3/getting-started)**  
-2.1 **(Optional)** Soundcloud Client ID **[Guide](https://github.com/zackradisic/node-soundcloud-downloader#client-id)**
-3. Node.js v12.0.0 or newer
+1. Rename **_realconfig.json_** **_to config.json_**
+2. Discord Bot Token **[Guide](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)**
+3. YouTube Data API v3 Key **[Guide](https://developers.google.com/youtube/v3/getting-started)**  
+4.1 **(Optional)** Soundcloud Client ID **[Guide](https://github.com/zackradisic/node-soundcloud-downloader#client-id)**
+5. Node.js v12.0.0 or newer
 
 ```
 git clone https://github.com/williamthefatty/Fatt-Bot.git

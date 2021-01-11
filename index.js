@@ -2,13 +2,13 @@
  * Module Imports
  */
 
-const { Client, Collection } = require("discord.js");
-const { readdirSync } = require("fs");
-const { join } = require("path");
-const { TOKEN, PREFIX } = require("./util/Util");
-const client = new Client({ disableMentions: "everyone" });
+const { Client, Collection } = require('discord.js');
+const { readdirSync } = require('fs');
+const { join } = require('path');
+const { TOKEN, PREFIX } = require('./util/Util');
+const client = new Client({ disableMentions: 'everyone' });
 const cooldowns = new Collection();
-const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 /**
  * Client Events
@@ -20,15 +20,15 @@ client.prefix = PREFIX;
 client.queue = new Map();
 
 const actvs = [
-  "with the /help command.",
-  "with the developers console",
-  "with some code",
-  "with JavaScript",
-  "with sea shanties",
-  "with shitty minecraft mods",
-  "with my Dreamcast",
-  "with my Chromecast",
-  "with a computer",
+  'with the /help command.',
+  'with the developers console',
+  'with some code',
+  'with JavaScript',
+  'with sea shanties',
+  'with shitty minecraft mods',
+  'with my Dreamcast',
+  'with my Chromecast',
+  'with a computer',
 ];
 
 client.on('ready', () => {
@@ -39,20 +39,20 @@ client.on('ready', () => {
   }, 60000);
 });
 
-client.on("warn", (info) => console.log(info));
-client.on("error", console.error);
+client.on('warn', (info) => console.log(info));
+client.on('error', console.error);
 
 /**
  * Import all commands
  */
 
-const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
+const commandFiles = readdirSync(join(__dirname, 'commands')).filter((file) => file.endsWith('.js'));
 for (const file of commandFiles) {
-  const command = require(join(__dirname, "commands", `${file}`));
+  const command = require(join(__dirname, 'commands', `${file}`));
   client.commands.set(command.name, command);
 }
 
-client.on("message", async (message) => {
+client.on('message', async (message) => {
   if (message.author.bot) return;
   if (!message.guild) return;
 
@@ -96,6 +96,6 @@ client.on("message", async (message) => {
     command.execute(message, args);
   } catch (error) {
     console.error(error);
-    message.reply("There was an error executing that command.").catch(console.error);
+    message.reply('There was an error executing that command.').catch(console.error);
   }
 });
