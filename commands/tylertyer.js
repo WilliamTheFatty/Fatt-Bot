@@ -1,6 +1,7 @@
 module.exports = {
     name: "tylertyer",
-    description: "",
+    aliases: ["tt"],
+    description: "TylerTyer",
     async execute(message, args) {
       const { channel } = message.member.voice;
       const queue = message.client.queue.get(message.guild.id);
