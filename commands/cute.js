@@ -20,7 +20,7 @@ module.exports = {
       try {
         queueConstruct.connection = await channel.join();
         const dispatcher = queueConstruct.connection
-          .play('./sounds/penis.mp3')
+          .play('./sounds/cute.mp3')
           .on('finish', () => {
             message.client.queue.delete(message.guild.id);
             channel.leave();
