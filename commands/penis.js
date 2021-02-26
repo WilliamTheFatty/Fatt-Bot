@@ -1,6 +1,6 @@
 module.exports = {
-    name: "concrete",
-    description: "FUCK YEAH CONCRETE",
+    name: "penis",
+    description: "tyler googles penis",
     async execute(message, args) {
       const { channel } = message.member.voice;
       const queue = message.client.queue.get(message.guild.id);
