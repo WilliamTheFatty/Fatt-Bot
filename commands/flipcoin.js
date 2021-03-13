@@ -3,7 +3,7 @@ const commando = require('discord.js-commando');
 
 module.exports = {
     name: "flipcoin",
-    aliases: ["fc"],
+    aliases: 'fc,flip',
     description: "Flip a Coin",
     execute(message, choices, output) {
 
