@@ -27,7 +27,6 @@ const actvs = [
   'with sea shanties',
   'with shitty minecraft mods',
   'with my Dreamcast',
-  'with my Chromecast',
   'with a computer',
 ];
 
