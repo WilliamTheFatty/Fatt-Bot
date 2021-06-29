@@ -23,6 +23,7 @@
     "lyrics-finder": "^21.0.5",
     "nekos.life": "^2.0.7",
     "node-superfetch": "^0.1.10",
+    "opusscript": "0.0.8",
     "random-puppy": "^1.1.0",
     "request": "^2.88.2",
     "simple-youtube-api": "^5.1.1",
